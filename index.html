@@ -42,6 +42,29 @@
     <![endif]-->
 
 </head>
+    .portfolio-filter {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.portfolio-filter li {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-filter li.active, .portfolio-filter li:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
 <body>
 
     <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
@@ -163,112 +186,71 @@
         </section><!-- /.secton-skills -->
 
         <section id="portfolio" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Portfolio</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/zzz.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Dasboard</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://abduljabbar111.github.io/UTS/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="text-center">
+            <h3>My Portfolio</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+        </div>
 
-                        <div class="portfolio-item">
-                            <img src="assets/img/Cu.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Form Login</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://abduljabbar111.github.io/FORM-LOGIN/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Tabs for categories -->
+        <div class="text-center">
+            <ul class="portfolio-filter">
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="projek">Projek</li>
+                <li data-filter="certificate">Certificate</li>
+            </ul>
+        </div>
 
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/Cup.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Kalkulator</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://abduljabbar111.github.io/KALKULATOR-JABBAR/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/tet.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Game Tetris</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem4"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://abduljabbar111.github.io/Game-Tetris/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/introduction to javascript.jpg" class="img-res" alt="Certificate">
-                            <div class="portfolio-item-info">
-                                <h4>JavaScript Certificate</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem5"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://www.sololearn.com/certificates/CC-NZT50ONT" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/introduction to css.jpg" class="img-res" alt="CSS Certificate">
-                            <div class="portfolio-item-info">
-                                <h4>CSS Certificate</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem6"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://www.sololearn.com/certificates/CC-IVVCJVHA" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/introduction to html.jpg" class="img-res" alt="HTML Certificate">
-                            <div class="portfolio-item-info">
-                                <h4>HTML Certificate</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem7"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://www.sololearn.com/certificates/CC-N73NVUR3" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/Chart.jpg" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Chart Dashboard</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem8"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://abduljabbar111.github.io/CHART_DASHBOARD/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/ser.jpg" class="img-res" alt="Javascript Intermediate Certificat">
-                            <div class="portfolio-item-info">
-                                <h4>Javascript Intermediate Certificate</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem9"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="https://www.sololearn.com/certificates/CC-WRXK0VCF" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
-                            </div>
-                        </div>
+        <div class="row portfolio-items">
+            <!-- Projek items -->
+            <div class="col-md-4 col-xs-6" data-category="projek">
+                <div class="portfolio-item">
+                    <img src="assets/img/zzz.jpg" class="img-res" alt="Dashboard">
+                    <div class="portfolio-item-info">
+                        <h4>Dashboard</h4>
+                        <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="https://abduljabbar111.github.io/UTS/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
                     </div>
                 </div>
             </div>
-        </section>
-        
+
+            <div class="col-md-4 col-xs-6" data-category="projek">
+                <div class="portfolio-item">
+                    <img src="assets/img/Cu.jpg" class="img-res" alt="Form Login">
+                    <div class="portfolio-item-info">
+                        <h4>Form Login</h4>
+                        <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="https://abduljabbar111.github.io/FORM-LOGIN/" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate items -->
+            <div class="col-md-4 col-xs-6" data-category="certificate">
+                <div class="portfolio-item">
+                    <img src="assets/img/introduction to javascript.jpg" class="img-res" alt="JavaScript Certificate">
+                    <div class="portfolio-item-info">
+                        <h4>JavaScript Certificate</h4>
+                        <a href="#" data-toggle="modal" data-target="#portfolioItem5"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="https://www.sololearn.com/certificates/CC-NZT50ONT" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-6" data-category="certificate">
+                <div class="portfolio-item">
+                    <img src="assets/img/introduction to html.jpg" class="img-res" alt="HTML Certificate">
+                    <div class="portfolio-item-info">
+                        <h4>HTML Certificate</h4>
+                        <a href="#" data-toggle="modal" data-target="#portfolioItem7"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="https://www.sololearn.com/certificates/CC-N73NVUR3" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <section id="contact" class="site-section section-form text-center">
             <div class="container">
